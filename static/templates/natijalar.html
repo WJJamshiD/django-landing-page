@@ -1,0 +1,9 @@
+<h1>{{ pol.savol_matni }}</h1>
+
+<ul>
+{% for choice in pol.variant_set.all %}
+    <li>{{ choice.variant_matni }} -- {{ choice.ovozlar }} vote{{ choice.ovozlar|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'join:malumot' pol.pk %}">Qayta ovoz berasizmi?</a>

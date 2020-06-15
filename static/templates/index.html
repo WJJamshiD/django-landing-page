@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+
+   <header class="header container-fluid"> 
+    <div class="overlay row">
+        <div class="col-md-7">
+            <div class="description">
+                <h1> Welcome to MVP-landing page of maths Tutor WJ_JamshiD</h1>
+                <p>Lorem ipsum dolorimi necessitatibus  dolores fugit excepturi, optio aut ea unde exercitationem quaerat veniam voluptatem veritatis ut obcaecati explicabo?</p>
+                <button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
+            </div>
+        </div>
+        <div class="col-md-5">
+            
+            <iframe  src="https://www.youtube.com/embed/Y05fbnvDLMM?list=PLEsfXFp6DpzTJ9L8KrHfF_vt9mSV5foAO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+
+
+        </div>
+    </div>
+    </header>
+
+    <div class="container features">
+        <div class="row">
+          <div class="col-md-4 ">
+            <h3 class="feature-title">Lorem ipsum</h3>
+            <img src="images/column-1.jpg" class="img-fluid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="feature-title">Lorem ipsum</h3>
+            <img src="images/column-2.jpg" class="img-fluid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+          </div>
+          <div class="col-md-4">       
+            <h3 class="feature-title">Get in Touch!</h3>
+            <form action="" method='POST'> {%csrf_token%}
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" name="first_name">
+                </div>
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" name="last_name">
+                </div>
+                <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email Address" name="email">
+                </div>
+                <div class="form-group">
+                <input  class="form-control" type='text' name='zip_code' placeholder="zip code"/>
+                </div>
+                <div>
+                <input type="submit" class="btn btn-secondary btn-block" value="Send" name=""> 
+                </div>
+            </form>
+        </div>
+        </div> 
+      </div>
+
+
+{% endblock main %}
+
+
+
