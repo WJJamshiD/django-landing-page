@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags%}
+
+
+{% block content %}
+
+<div class="jumbotron contact">
+
+    <div class="row">
+    
+    <div class='col-md-8 offset-md-2'>
+    
+        <h2 class='text-center'>Fill the form!</h2>
+         {%if messages%}
+    {% for message in messages%}
+        <div {%if message.tags == 'success' %} 
+                class='alert alert-success text-center' 
+            {%elif message.tags == 'error' %} 
+                class='alert alert-danger text-center' 
+            {%else %} 
+                class='alert alert-dark text-center' 
+            {%endif%} role="alert">
+            {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+        {%crispy form%}
+    </div>
+    </div>
+</div>
+
+{% endblock content %}

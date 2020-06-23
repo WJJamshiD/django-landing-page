@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include,re_path
-from join.views import join
+from join.views import join,thanks,aboutus
 from django.conf import settings
 from django.conf.urls.static import static 
 
 urlpatterns = [
 	re_path('^$',join, name='index'),
+	path('en/',include('join.urls')),
+	path('accounts/', include('registration.backends.default.urls')),
 	path('admin/', admin.site.urls),
 ]
 

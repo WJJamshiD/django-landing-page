@@ -135,3 +135,107 @@ html,body{
     color: #666;
     padding: 40px 0 10px 0;
   }
+
+  .aboutus{
+    height: 45vh;
+    margin-bottom: 0;
+  }
+
+  .share-page{
+    margin-bottom: 0;
+  }
+
+  .share-page span{
+    font-size: 4rem;
+  }
+
+  .social span{
+    font-size: 2.3rem;
+  }
+  span.f{
+    color: rgb(43, 43, 233);
+
+  }
+  span.t{
+    color:rgb(49, 197, 235)
+  }
+  span.l{
+    color: rgb(63, 167, 170);
+  }
+  span.r{
+    color: rgb(209, 20, 20);
+  }
+  span.g{
+    color:rgb(196, 6, 6);
+    
+  }
+
+  .prog{
+    padding: 30px 0;
+  }
+
+  .landing{
+    border-top: 4px solid #a0a0f5;
+    background: url("https://i.pinimg.com/originals/ed/4a/60/ed4a6004fe2bfc0eb10741030a8fdc49.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+
+  .mainsection{
+    padding: 60px 0 0;
+  }
+
+  .formtitle{
+    font-size: 3rem;
+    font-weight: 400;
+    color: white;
+  }
+
+  .btn-gray{
+    background: #c2cbe0;
+    border: 1px solid white;
+  }
+
+  .btn-gray:hover{
+    background: transparent;
+    color:white;
+    font-weight: 600;
+  }
+
+  .jumbotron h3{
+    font-weight: 200;
+  }
+  .jumbotron h5{
+    font-weight: 100;
+  }
+
+  p.lead1{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: white;
+  }
+  .below{
+    background: white;
+    padding: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  .below .col-sm-3{
+    padding-bottom: 20px;
+  }
+
+.navbar-collapse{
+  text-align: left;
+}
+
+.contact{
+  margin-bottom: 0;
+}
+
+.redux{
+  padding: 30px;
+}

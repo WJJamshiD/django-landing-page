@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+
+{%block navbar%}
+    <nav class="navbar navbar-expand-md ">
+      <a class="navbar-brand" href="{%url 'index'%}">Math<sup>WJ</sup></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" ></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ml-auto">
+            <a class="nav-link"  href="{%url 'lwc_index'%}">LWC[home]</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+{%endblock%}
+
+
+{% block content %}
+ {%if messages%}
+    {% for message in messages%}
+        <div {%if message.tags == 'success' %} class='alert alert-success text-center' {%endif%} role="alert">
+            {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+<div class="row" style='height:50vh; padding-top:30vh;'>
+<div class="col-sm-12">
+    <h1 class="text-center">Thank you for joining us! We'll be in touch!</h1>
+</div>
+</div>
+
+
+{% endblock content %}
+
+

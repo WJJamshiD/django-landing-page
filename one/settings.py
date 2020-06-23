@@ -35,9 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'registration'
     
 ]
 
@@ -49,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'join.middleware.ReferMiddleware',
 ]
 
 ROOT_URLCONF = 'one.urls'
@@ -125,3 +129,18 @@ MEDIA_URL='/media/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static_cdn')
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static','static')]
 MEDIA_ROOT=os.path.join(BASE_DIR,'media_cdn')
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='example@gmail.com'
+EMAIL_HOST_PASSWORD='password'
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+
+# Crispy-forms settings
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Django-registration-redux settings
+ACCOUNT_ACTIVATION_DAYS=5
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID=1
